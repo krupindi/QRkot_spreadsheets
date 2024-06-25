@@ -30,7 +30,7 @@ class CRUDCharityProject(
     ) -> list[CharityProject]:
         result = await db.execute(
             select(self.model)
-            .filter(self.model.fully_invested == True)
+            .filter(self.model.fully_invested.is_(True))
             .order_by(func.julianday(self.model.close_date) - func.julianday(
                 self.model.create_date))
         )
