@@ -11,7 +11,7 @@ from app.services.google_api import (
     spreadsheets_update_value
 )
 from app.crud.charity_project import charity_project_crud
-from app.schemas.charity_project import (CharityProjectRead)
+from app.schemas.charity_project import CharityProjectRead
 
 router = APIRouter()
 
